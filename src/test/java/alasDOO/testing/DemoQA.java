@@ -25,7 +25,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 class DemoQA {
 	
-	@Disabled
 	@Test
 	void testDemoQA() throws InterruptedException, IOException {
 		
@@ -77,7 +76,7 @@ class DemoQA {
 		// take the screenshot of the page
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		File destFile = new File(".\\Screenshots\\Screen.jpeg");
+		File destFile = new File(".\\Screenshots\\Screen-" + Math.random() +".jpeg");
 		FileUtils.copyFile(source, destFile);
 		System.out.println("The Screenshot is taken");
 		

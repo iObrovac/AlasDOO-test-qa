@@ -12,7 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CheeseQA {
 
-	@Disabled
 	@Test
 	void tooMuchCheese() {
 		System.setProperty("webdriver.chrome.driver", "Server\\chromedriver.exe");
