@@ -7,7 +7,6 @@ import java.io.IOException;
 
 
 import org.apache.commons.io.FileUtils;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -48,7 +47,6 @@ class DemoQA {
 		// wait till the first element is clickable and then click it
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/div/div/div[1]/a/h3"))).click();
 		                                                         
-		
 		Thread.sleep(2000);
 		
 		// find the interactions button and click it
@@ -87,9 +85,6 @@ class DemoQA {
 		js.executeScript("window.scrollBy(0,250)", "");
 		Thread.sleep(3000);
 		js.executeScript("window.scrollBy(0,250)", "");
-		
-		//remove the commercial 
-		//driver.findElement(By.xpath("/html/body/div[3]/form/label/svg/path[2]")).click();
 		
 		// click on Tool Tips
 		driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[4]/div/ul/li[7]/span")).click();

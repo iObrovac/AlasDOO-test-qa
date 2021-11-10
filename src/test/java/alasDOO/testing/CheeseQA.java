@@ -17,7 +17,6 @@ public class CheeseQA {
 		System.setProperty("webdriver.chrome.driver", "Server\\chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
-		WebDriverWait wait = new WebDriverWait(driver, 15);
 		
 		driver.manage().window().maximize();
 		// go to google

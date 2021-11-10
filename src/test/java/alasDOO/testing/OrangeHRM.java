@@ -38,11 +38,7 @@ public class OrangeHRM {
 		
 		js.executeScript("window.scrollBy(0,2000)", "");
 		Thread.sleep(3000);
-		js.executeScript("scroll(0,2000)");
 
-		
-		
-		
 		// get the number of candidates 
 		List<WebElement> candidates = driver.findElements(By.cssSelector("tr[class*='dataDefaultRaw dataRaw handCuser']"));
 		// print the current number of candidates
@@ -51,9 +47,6 @@ public class OrangeHRM {
 		// click on the green add button
 		driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div[7]/div/div[1]/a/i")).click();
 		Thread.sleep(5000);
-		
-		// get out of iFrame's context
-		//driver.switchTo().defaultContent();
 	    
 		// enter first name 
 		driver.findElement(By.id("addCandidate_firstName")).sendKeys("QA Automation");
@@ -67,12 +60,9 @@ public class OrangeHRM {
 		driver.findElement(By.id("addCandidate_resume")).sendKeys(userDir + "\\Server\\Igor Obrovac - CV.pdf");
 		Thread.sleep(2000);
 		
-		
 		// select the vacancy 
-		
 		WebElement select = driver.findElement(By.id("add-candidate-vacancy-widget-container")); 
 		select.click();
-		
 		
 		// select the first item in the dropdown
 		Thread.sleep(2000);
@@ -81,10 +71,8 @@ public class OrangeHRM {
 		// click save 
 		driver.findElement(By.id("saveCandidateButton")).click();
 		Thread.sleep(3000);
-		
-		
+		// get the number of candidates
 		List<WebElement> candidates2 = driver.findElements(By.cssSelector("tr[class*='dataDefaultRaw dataRaw handCuser']"));
-		
 		System.out.println("Number of candidates: " + candidates2.size());
 		
 		// assert if the number of candidates increased by one 
